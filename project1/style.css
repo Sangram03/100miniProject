@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    margin-top: 550px;
+    margin-left: 19px;
+    color: blue;
+    border: 2px solid green;
+    height: 50px;
+    width: 50px;
+}

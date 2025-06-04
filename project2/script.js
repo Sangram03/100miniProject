@@ -13,6 +13,10 @@ function loadTasks () {
 
 }
 
+// saving in the local storage
+
+
+
 function saveTasks(){
     const tasks = [];
     document.querySelectorAll('#taskList li').forEach(li => {

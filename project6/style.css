@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blue;
+    height: 100vh;
+}
+
+.new{
+    display: flex;
+    gap: 3px;
+}
+
+.new li {
+    color: white;
+}
+
+
+.newDoc{
+     margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+}
+
+h2{
+    color: white;
+    
+}
+
+input{
+    height: 20px;
+    width: 120px;
+}
+
+
+
+.new2{
+    display: flex;
+    margin-top: 321px;
+ 
+}
+
+
+
+.new3{
+    display: flex;
+    gap: 32px;
+}

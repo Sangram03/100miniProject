@@ -19,9 +19,9 @@ body{
     border-radius: 50%;
 }
 
-span{
+.spin span{
     display: flex;
-    flex-direction: row-reverse;
+    transform: rotate(calc(30deg * var(--i))); 
     border: 2px solid green;
     border-radius: 50%;
 }

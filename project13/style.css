@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.spin{
+    height: 300px;
+    width: 300px;
+    border: 2px solid  red;
+    border-radius: 50%;
+}
+
+span{
+    display: flex;
+    flex-direction: row-reverse;
+    border: 2px solid green;
+    border-radius: 50%;
+}

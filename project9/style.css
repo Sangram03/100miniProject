@@ -3,6 +3,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: #504242;
 }
 
 .div{
@@ -14,5 +15,39 @@ body{
     flex-direction: column;
     gap: 10px;
 }
+
+#gray{
+    background-color: gray;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#white{
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blue{
+    background-color:blue;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#yellow{
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 

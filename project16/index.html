@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To Do list</h1>
+        <input type="text" id="inputTask" placeholder="enter a task">
+        <button onclick="Addtask()">Enter a task</button>
+        <ul id="taskList"></ul>
+    </div>
+
+
+    <script>
+        function Addtask(){
+            const input = document.getElementById("inputTask");
+            const taskText = input.value.trim();
+            if(taskText === "") return;
+
+
+            const li = document.createElement("li");
+            li.innerHTML =`
+            <span onclick ="toggleComplete(this)">${taskText}</span>
+            <button onclick = "removeTask(this)">X</button>`;
+            document.getElementById("taskList").appendChild(li);
+            input.value = "";
+        }
+
+        function removeTask (btn){
+            btn.parentElement.remove();
+
+        }
+
+        function toggleComplete(span) {
+            span.parentElement.classList.toggle("completed");
+        }
+    </script>
+</body>
+</html>

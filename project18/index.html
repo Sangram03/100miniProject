@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text" placeholder="Enter input here">
+    <button  id="check">Check </button>
+</body>
+<script>
+    let check  = document.getElementById("check")
+    check.onclick=()=>{
+        let x = document.getElementById("input").value;
+        if (x.trim()) {
+         let div = document.createElement('div')
+         div.className= "newdiv"
+         div.style.color = "green"
+         div.style.height = "120px"
+         div.style.backgroundColor = "red"
+          div.innerText = x;
+         document.body.appendChild(div); // Append it to the page
+        console.log(div);
+        
+       }
+       
+      
+    }
+    
+</script>
+</html>

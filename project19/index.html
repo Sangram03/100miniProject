@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cross Layout Icons</title>
+  
+  <!-- Flaticon Icon Library -->
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cross-layout {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .icon-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: royalblue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .center-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .top-icon {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: yellow;
+    }
+
+    .bottom-icon {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .left-icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .right-icon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .icon-style {
+      background-color: #eee;
+      color: black;
+    }
+
+    .icon-style:hover {
+      background-color: royalblue;
+      color: white;
+    }
+
+    /* Hidden by default */
+    .side-icons.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .side-icons.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cross-layout">
+      <!-- Side Icons Wrapper -->
+      <div class="side-icons hidden" id="sideIcons">
+        <!-- Top -->
+        <button class="icon-btn top-icon icon-style">
+          <i class="fi fi-brands-facebook"></i>
+        </button>
+        
+        <!-- Bottom -->
+        <button class="icon-btn bottom-icon icon-style">
+          <i class="fi fi-brands-twitter"></i>
+        </button>
+        
+        <!-- Left -->
+        <button class="icon-btn left-icon icon-style">
+          <i class="fi fi-brands-instagram"></i>
+        </button>
+        
+        <!-- Right -->
+        <button class="icon-btn right-icon icon-style">
+          <i class="fi fi-brands-linkedin"></i>
+        </button>
+      </div>
+
+      <!-- Center Toggle Button -->
+      <button class="icon-btn center-btn" onclick="toggleIcons()">
+        <i class="fi fi-br-mouse-pointer-click"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const toggleIcons = () => {
+      const icons = document.getElementById("sideIcons");
+      icons.classList.toggle("hidden");
+      icons.classList.toggle("visible");
+    };
+
+  </script>
+</body>
+</html>

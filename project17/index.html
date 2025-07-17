@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .middle {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      li {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="middle">
+      <input class="myname" type="text" placeholder="Sangram Das" />
+      <input class="input" type="text" placeholder="Abhi" />
+      <button onclick="opentap()">Submit</button>
+      <div id="name"></div>
+    </div>
+
+    <script>
+      const opentap = () => {
+        let x = document.querySelector(".myname").value;
+        let y = document.querySelector(".input").value;
+        let z = (document.getElementById(
+          "name"
+        ).innerHTML = `my name is ${x} and my friend name is ${y}`);
+      };
+    </script>
+  </body>
+</html>

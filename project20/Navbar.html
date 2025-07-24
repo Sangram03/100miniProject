@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Navbar</title>
+  <style>
+    /* Basic styles */
+    #navbar {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-item {
+      background-color: #4f46e5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: center;
+    }
+
+    .nav-item:hover {
+      background-color: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button to Show Navbar -->
+  <button id="toggleNavbarBtn">Show Navbar</button>
+
+  <!-- Hidden Navbar Container -->
+  <div id="navbar"></div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleNavbarBtn");
+    const navbar = document.getElementById("navbar");
+
+    // Define your routes
+    const routes = [
+      { 
+        name: "Home", 
+        url: "home.html"
+     },
+      { 
+        name: "About", 
+        url: "about.html" 
+    },
+      { 
+        name: "Services", 
+        url: "services.html" 
+    },
+      { 
+        name: "Projects",
+       url: "projects.html"
+     },
+      { 
+        name: "Contact",
+       url: "contact.html"
+     },
+    ];
+
+    toggleBtn.addEventListener("click", () => {
+      navbar.innerHTML = ""; // Clear previous buttons if any
+      routes.forEach(route => {
+        const div = document.createElement("div");
+        div.className = "nav-item";
+        div.textContent = route.name;
+        div.onclick = () => {
+          window.location.href = route.url;
+        };
+        navbar.appendChild(div);
+      });
+
+      // Optionally hide the button
+      toggleBtn.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

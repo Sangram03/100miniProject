@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        #showbtn{
+            height: 50px;
+            width: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+  <!-- Main Button -->
+  <button id="showBtn">Show More Buttons</button>
+
+  <!-- Container for New Buttons -->
+  <div id="buttonsContainer" style="margin-top: 20px;"></div>
+
+  <script>
+    const showBtn = document.getElementById('showBtn');
+    const container = document.getElementById('buttonsContainer');
+
+    showBtn.addEventListener('click', () => {
+      container.innerHTML = ""; // Optional: clears previously added buttons
+      for (let i = 1; i <= 5; i++) {
+        const newButton = document.createElement('button');
+        newButton.textContent = `Button ${i}`;
+        newButton.style.marginRight = "10px";
+        container.appendChild(newButton);
+      }
+
+      // Optional: hide the main button after click
+      showBtn.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

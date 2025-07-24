@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Calculator</title>
+  </head>
+  <body>
+    <input id="FirstNum" type="number" placeholder="Enter First Number" /><br />
+    <input id="SecondNum" type="number" placeholder="Enter Second Number" /><br />
+    <button onclick="Sum()">SUM</button>
+    <div id="new"></div>
+
+    <script>
+      function Sum() {
+        let a = Number(document.getElementById("FirstNum").value);
+        let b = Number(document.getElementById("SecondNum").value);
+
+        let result = a + b;
+
+        document.getElementById("new").innerHTML = `Sum: ${result}`;
+      }
+    </script>
+  </body>
+</html>

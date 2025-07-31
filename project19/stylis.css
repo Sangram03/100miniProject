@@ -1,0 +1,66 @@
+       /* 🌈 Animated Gradient Background */
+.events-section {background: linear-gradient(
+  to top,
+  rgba(0, 0, 0, 0.7),  /* from-black/70 */
+  rgba(0, 0, 0, 0.5),  /* via-black/50 */
+  rgba(0, 0, 0, 0.9)   /* to-black/90 */
+);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Floating Glowing Particles */
+.particles::before,
+.particles::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 2%, transparent 70%);
+  animation: floatParticles 30s linear infinite;
+  z-index: 1;
+}
+.particles::after { animation-delay: 15s; opacity: 0.5; }
+@keyframes floatParticles {
+  from { transform: translate(0, 0) rotate(0deg); }
+  to { transform: translate(-20%, -20%) rotate(360deg); }
+}
+
+/* 🎴 Event Card */
+.event-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+.event-card:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px) scale(1.03);
+}
+
+/* 🔥 Neon Buttons */
+.neon-btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #d526b2, #c83093);
+  box-shadow: 5px 5px 5px black;
+  transition: 0.3s;
+}
+.neon-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #ff00cc, 0 0 40px #3333ff;
+}
+.neon-btn.alt {
+  background: linear-gradient(90deg, #240be3, #220feb);
+  box-shadow: 5px 5px 5px black;
+}
